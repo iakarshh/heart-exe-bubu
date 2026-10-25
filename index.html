@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090510">
+  <meta name="description" content="A secret little universe made for Bubu.">
+  <title>HEART.exe — For Bubu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="stars" id="stars"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <header class="topbar">
+    <a class="brand" href="#" data-go="welcome"><span class="brand-heart">♥</span> HEART<span class="pink">.exe</span></a>
+    <div class="system-status"><span class="status-dot"></span> SYSTEM ONLINE <span class="divider">/</span> <span id="clock">00:00:00</span></div>
+    <button class="icon-btn" id="soundToggle" aria-label="Toggle soundtrack" title="Toggle soundtrack">♫ <span id="soundLabel">SOUND OFF</span></button>
+  </header>
+
+  <main>
+    <section class="screen active" id="screen-access" aria-labelledby="accessTitle">
+      <div class="access-layout">
+        <div class="eyebrow"><span class="tiny-pulse"></span> SECURE CONNECTION ESTABLISHED</div>
+        <div class="core-heart" aria-hidden="true"><div class="heart-orbit orbit-one"></div><div class="heart-orbit orbit-two"></div><div class="heart-shape">♥</div><div class="heart-ring"></div></div>
+        <h1 id="accessTitle">A universe<br><span class="gradient-text">made for Bubu.</span></h1>
+        <p class="lead">Somewhere between the stars and the impossible, a little world has been waiting for you.</p>
+        <div class="terminal">
+          <div class="terminal-head"><span>HEART://BOOT_SEQUENCE</span><span>v.01.♡</span></div>
+          <div id="bootLog" class="terminal-lines" aria-live="polite"></div>
+        </div>
+        <button class="primary-btn" id="enterBtn">ENTER BUBU'S UNIVERSE <span>↗</span></button>
+        <p class="microcopy">NO PASSWORD REQUIRED · JUST A LITTLE CURIOSITY</p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-welcome" aria-labelledby="welcomeTitle">
+      <div class="section-kicker">01 / CONNECTION</div>
+      <div class="welcome-grid">
+        <div>
+          <p class="eyebrow">HEY, BUBU <span class="pink">♡</span></p>
+          <h2 id="welcomeTitle">Welcome to<br><span class="gradient-text">our little universe.</span></h2>
+          <p class="lead">This isn't just a website. It's a tiny collection of thoughts, pixels, and surprises made to make you smile.</p>
+          <p class="body-copy">Explore slowly. Tap the glowing things. There are secrets hiding in places you might not expect.</p>
+          <div class="sticker-strip">
+            <a class="gif-sticker" href="https://tenor.com/view/dudu-bubu-cute-funny-lovely-gif-6177822533787717572" target="_blank" rel="noopener" aria-label="Open Dudu and Bubu cute GIF">
+              <iframe src="https://tenor.com/embed/6177822533787717572" title="Dudu and Bubu cute GIF" loading="lazy" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span>DU DU + BU BU ♡</span>
+            </a>
+            <a class="gif-sticker" href="https://tenor.com/view/bubu-dudu-stickers-gif-26831087" target="_blank" rel="noopener" aria-label="Open Bubu and Dudu sticker GIF">
+              <iframe src="https://tenor.com/embed/26831087" title="Bubu and Dudu sticker GIF" loading="lazy" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              <span>100% CUTENESS</span>
+            </a>
+          </div>
+          <button class="primary-btn" data-go="scanner">LET'S EXPLORE <span>→</span></button>
+        </div>
+        <div class="universe-card">
+          <div class="planet planet-main"><span>♡</span></div><div class="planet planet-small p1">✦</div><div class="planet planet-small p2">✧</div>
+          <div class="orbit-line o1"></div><div class="orbit-line o2"></div>
+          <button class="floating-note note-one" data-note="If this little universe had a favorite star, you already know who it would be.">✦ <span>tap me</span></button>
+          <button class="floating-note note-two" data-note="Tiny reminder: you deserve the kind of happiness that finds you on ordinary days, too.">♡ <span>one more</span></button>
+          <div class="card-label">PERSONAL GALAXY // B-001</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-scanner" aria-labelledby="scannerTitle">
+      <div class="section-kicker">02 / HEART INTELLIGENCE</div>
+      <div class="centered">
+        <p class="eyebrow">RUNNING A VERY IMPORTANT SCAN</p>
+        <h2 id="scannerTitle">Bubu.exe <span class="gradient-text">analysis</span></h2>
+        <p class="lead narrow">A completely fictional, scientifically-unscientific scan of your superpower: being you.</p>
+        <div class="scanner-visual">
+          <div class="scan-ring sr1"></div><div class="scan-ring sr2"></div><div class="scan-ring sr3"></div>
+          <div class="scan-heart">♥</div><div class="scan-line"></div>
+        </div>
+        <div class="scan-readout"><span id="scanStatus">AWAITING INPUT</span><strong id="scanPercent">00%</strong></div>
+        <div class="progress-track"><div id="scanProgress"></div></div>
+        <button class="primary-btn" id="scanBtn">INITIATE SCAN <span>⌁</span></button>
+        <div class="scan-result hidden" id="scanResult">
+          <span class="result-label">VERY OFFICIAL REPORT // DEFINITELY NOT FAKE</span>
+          <h3 id="scanJokeTitle">Bubu.exe has stopped being normal.</h3>
+          <p id="scanJokeText">Loading the result...</p>
+          <div class="scan-gif-row">
+            <iframe src="https://tenor.com/embed/6177822533787717572" title="Funny cute Dudu Bubu reaction GIF" loading="lazy" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="scan-caption" id="scanCaption">TECH SUPPORT SAYS: GIVE BUBU A SNACK.</div>
+          </div>
+          <button class="text-btn" id="scanAgainBtn">RUN ONE MORE VERY SCIENTIFIC SCAN ↻</button>
+          <button class="primary-btn hidden" id="scanContinueBtn">OKAY, ENOUGH SCIENCE — CONTINUE →</button>
+        </div>
+        <p class="microcopy">FICTIONAL SCAN · 0% SCIENCE · 100% BUBU ENERGY</p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-galaxy" aria-labelledby="galaxyTitle">
+      <div class="section-kicker">03 / MEMORY GALAXY</div>
+      <div class="centered">
+        <p class="eyebrow">A FEW LITTLE ORBITS</p>
+        <h2 id="galaxyTitle">Things I hope <span class="gradient-text">you remember.</span></h2>
+        <p class="lead narrow">Tap a planet. Each one has a tiny message tucked inside.</p>
+      </div>
+      <div class="memory-grid" id="memoryGrid"></div>
+      <div class="bottom-action"><button class="primary-btn" data-go="game">UNLOCK THE NEXT LEVEL <span>→</span></button></div>
+    </section>
+
+    <section class="screen" id="screen-game" aria-labelledby="gameTitle">
+      <div class="section-kicker">04 / MINI GAME</div>
+      <div class="centered">
+        <p class="eyebrow">SIDE QUEST UNLOCKED</p>
+        <h2 id="gameTitle">Choose your <span class="gradient-text">kind of magic.</span></h2>
+        <p class="lead narrow">No wrong answers. This universe changes its mood with you.</p>
+      </div>
+      <div class="choice-grid">
+        <button class="theme-choice" data-theme="nebula"><span class="choice-icon">✦</span><strong>NEBULA</strong><small>Neon dreams & cosmic dust</small></button>
+        <button class="theme-choice" data-theme="moonlight"><span class="choice-icon">☾</span><strong>MOONLIGHT</strong><small>Quiet skies & soft glow</small></button>
+        <button class="theme-choice" data-theme="sunset"><span class="choice-icon">☼</span><strong>AFTERGLOW</strong><small>Warm colors, golden hour</small></button>
+      </div>
+      <div class="game-message" id="themeMessage">Choose a universe above to change the atmosphere.</div>
+      <div class="secret-game">
+        <div><span class="result-label">BONUS CHALLENGE</span><h3>Find the three hidden hearts</h3><p>Look around this panel and tap all three hearts to unlock a secret note.</p></div>
+        <div class="heart-hunt" id="heartHunt"><button aria-label="Hidden heart 1">♡</button><button aria-label="Hidden heart 2">♡</button><button aria-label="Hidden heart 3">♡</button></div>
+        <p id="huntMessage" class="hunt-message">0 / 3 found</p>
+      </div>
+      <div class="bottom-action"><button class="primary-btn" data-go="vault">VISIT THE SECRET VAULT <span>⌁</span></button></div>
+    </section>
+
+    <section class="screen" id="screen-vault" aria-labelledby="vaultTitle">
+      <div class="section-kicker">05 / SECRET VAULT</div>
+      <div class="vault-wrap">
+        <div class="vault-icon">▣</div>
+        <p class="eyebrow">ENCRYPTED MESSAGE DETECTED</p>
+        <h2 id="vaultTitle">A little note, <span class="gradient-text">just for you.</span></h2>
+        <p class="lead narrow">Some things are better opened with a little curiosity.</p>
+        <div class="vault-panel">
+          <div class="vault-lock">⌑</div>
+          <div class="vault-code" id="vaultCode">••• •••</div>
+          <p id="vaultHint">Tap the unlock button to reveal the message.</p>
+          <button class="primary-btn" id="unlockVault">UNLOCK MESSAGE <span>↗</span></button>
+        </div>
+        <div id="letter" class="letter hidden">
+          <div class="letter-top">A NOTE FROM MY SIDE OF THE UNIVERSE</div>
+          <h3>Dear Bubu, <span class="pink">♡</span></h3>
+          <p>Hey you. I made this little corner of the internet because sometimes a normal message doesn't feel special enough.</p>
+          <p>I hope life gives you a thousand reasons to smile, people who make you feel safe, and moments that remind you how wonderful you are.</p>
+          <p>And whenever a day feels a little too heavy, I hope you remember: you matter, your feelings matter, and you deserve kindness without having to earn it.</p>
+          <p class="letter-sign">— someone who wanted to make you smile ✦</p>
+          <button class="text-btn" data-go="surprise">THERE'S ONE LAST THING →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-surprise" aria-labelledby="surpriseTitle">
+      <div class="surprise-stage">
+        <div class="surprise-stars">✦　·　✧　　·　✦</div>
+        <div class="final-sticker">
+          <iframe src="https://tenor.com/embed/1421351511835873494" title="Dudu and Bubu cute couple GIF" loading="lazy" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="surprise-heart" id="surpriseHeart">♥</div>
+        <p class="eyebrow">FINAL FILE // OPEN WHEN READY</p>
+        <h2 id="surpriseTitle">You found the <span class="gradient-text">secret.</span></h2>
+        <p class="lead narrow">There was no big secret code. No impossible puzzle. Just one small truth I wanted to put somewhere beautiful.</p>
+        <button class="primary-btn" id="revealBtn">REVEAL THE LAST MESSAGE <span>♡</span></button>
+        <div id="finalMessage" class="final-message hidden">
+          <div class="final-orbit">♥</div>
+          <p class="eyebrow">MESSAGE DECRYPTED</p>
+          <h2>In a universe full of stars,<br><span class="gradient-text">I'm glad yours crossed mine.</span></h2>
+          <p>That's the surprise, Bubu. No pressure, no expectations. Just a little universe built to remind you that someone wanted to make your day feel special.</p>
+          <div class="final-actions"><button class="primary-btn" id="celebrateBtn">MAKE IT SPARKLE ✦</button><button class="secondary-btn" data-go="welcome">EXPLORE AGAIN ↺</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Website sections">
+    <button data-go="welcome" aria-label="Welcome">01 <span>WELCOME</span></button>
+    <button data-go="scanner" aria-label="Heart scanner">02 <span>SCAN</span></button>
+    <button data-go="galaxy" aria-label="Memory galaxy">03 <span>GALAXY</span></button>
+    <button data-go="game" aria-label="Mini game">04 <span>GAME</span></button>
+    <button data-go="vault" aria-label="Secret vault">05 <span>VAULT</span></button>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop hidden" id="messageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="message-modal"><button class="modal-close" id="modalClose" aria-label="Close message">×</button><div class="modal-spark">✧</div><p class="eyebrow">A LITTLE MESSAGE FOR BUBU</p><h3 id="modalTitle">A tiny secret</h3><p id="modalText"></p><button class="primary-btn" id="modalOkay">KEEP EXPLORING</button></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
